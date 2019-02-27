@@ -7,9 +7,9 @@ def get_first_name_of_season_winner(data, season)
 end
 
 def get_contestant_name(data, occupation)
-  data.each do |season, element|
-    if element[:occupation].has_value?(occupation)
-    name = element[:name]
+  data.each do |season, info_hash|
+    if info_hash[:occupation].has_value?(occupation)
+    name = info_hash[:name]
     end
   end
   return name
