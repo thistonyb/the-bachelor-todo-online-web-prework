@@ -10,6 +10,7 @@ def get_contestant_name(data, occupation)
   data.each do |season, element|
     if element[:occupation].has_value?(occupation)
     element[:name]
+    end
   end
 end
 
