@@ -43,6 +43,6 @@ def get_average_age_for_season(data, season)
   data[season].each do |details_hash|
     average_age += details_hash["age"].to_f
   end
-  average_age = average_age / data[season].length.ceil
+  average_age = average_age / data[season].length
   return average_age
 end
