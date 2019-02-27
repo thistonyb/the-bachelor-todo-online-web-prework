@@ -8,9 +8,10 @@ end
 
 def get_contestant_name(data, occupation)
   data.each do |season, contestant_array|
-    contestant_array.each do |details_key, info_value|
-      if details_key[:occupation] == occupation
-        return info_value
+    contestant_array.each do |details_hash|
+      if details_hash.has_value?(occupation)
+        details_hash[:name]
+
       end
     end
   end
