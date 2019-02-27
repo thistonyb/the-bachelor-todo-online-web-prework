@@ -10,11 +10,10 @@ def get_contestant_name(data, occupation)
   data.each do |season, contestant_array|
     contestant_array.each do |details_hash|
       if details_hash.has_value?(occupation)
-        name = details_hash["name"]
+        return details_hash["name"]
       end
     end
   end
-  return name
 end
 
 def count_contestants_by_hometown(data, hometown)
