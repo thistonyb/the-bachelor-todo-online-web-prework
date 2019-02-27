@@ -44,5 +44,5 @@ def get_average_age_for_season(data, season)
     average_age += details_hash["age"].to_f
   end
   average_age = average_age / data[season].length
-  return average_age
+  return average_age.ceil
 end
