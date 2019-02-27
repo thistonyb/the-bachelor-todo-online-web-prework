@@ -31,7 +31,7 @@ end
 def get_occupation(data, hometown)
   data.each do |season, contestant_array|
     contestant_array.each do |details_hash|
-      if details_hash[:hometown] == hometown
+      if details_hash.has_value?(hometown)
         return details_hash[:occupation]
       end
     end
